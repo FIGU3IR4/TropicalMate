@@ -12,9 +12,9 @@ import img2 from './assets/Foto2.jpg'; // Importe o logo
 // - #F5E4B8: Bege Claro (Fundo Principal)
 
 const sampleProducts = [
-  { id: 1, category: "Cuias", name: "Cuia Artesanal - Itaíba", desc: "Cuia esculpida à mão. Acabamento premium.", price: "Consulte-nos", img: img1 },
-  { id: 2, category: "Bombas", name: "Bomba Aço Inox", desc: "Bomba profissional para uso diário.", price: "R$ 29,90", img: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" },
-  { id: 3, category: "Ervas", name: "Erva Premium - Aroma Citrus", desc: "Blend aromático para um tererê refrescante.", price: "Consulte-nos", img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" },
+  { id: 1, category: "Ervas", name: "Erva Matuta - Menta extreme", desc: "Cuia esculpida à mão. Acabamento premium.", price: "24,90", img: img1 },
+  { id: 2, category: "Ervas", name: "Erva Matuta - Menta Monster", desc: "Bomba profissional para uso diário.", price: "R$ 29,90",img: img2  },
+  { id: 3, category: "Ervas", name: "Erva Matuta - Cereja", desc: "Blend aromático para um tererê refrescante.", price: "22,99", img: img3  },
   { id: 4, category: "Cuias", name: "Cuia de Couro", desc: "Clássica e durável, feita em couro legítimo.", price: "R$ 29,90", img: "https://images.unsplash.com/photo-1517486801-f2f6a6c4b2b6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" },
 ];
 
@@ -177,6 +177,7 @@ function AboutSection() {
 }
 
 // NOVO COMPONENTE
+// NOVO COMPONENTE (APENAS O PRODUCTCARD FOI ALTERADO)
 function ProductCard({ product, index }) {
   const waLink = `https://wa.me/5581999928655`;
 
@@ -189,9 +190,18 @@ function ProductCard({ product, index }) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="bg-white rounded-xl shadow-xl overflow-hidden flex flex-col hover:shadow-2xl transition-shadow"
     >
-      <div className="h-48 bg-gray-200 overflow-hidden">
-        {/* Placeholder de Imagem */}
-        <img src={product.img.replace('placeholder', product.category)} alt={product.name} className="w-full h-full object-cover" />
+      {/* Ajuste feito aqui:
+        1. Mantido 'h-48' para altura do container.
+        2. Alterado 'object-cover' para 'object-contain' para mostrar a imagem completa.
+        3. Adicionado 'p-2' no contêiner para um pequeno padding visual.
+      */}
+      <div className="h-48 bg-white-200 overflow-hidden flex items-center justify-center p-2">
+        <img 
+          // O replace não é mais necessário, pois você importou as imagens
+          src={product.img} 
+          alt={product.name} 
+          className="max-h-full max-w-full object-contain" 
+        />
       </div>
       <div className="p-5 flex flex-col flex-grow">
         <h3 className="text-xl font-bold text-[#264E1D]">{product.name}</h3>
@@ -212,6 +222,7 @@ function ProductCard({ product, index }) {
     </motion.div>
   );
 }
+// ...
 
 // NOVO COMPONENTE
 function CatalogSection({ products }) {
