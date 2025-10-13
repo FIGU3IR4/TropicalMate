@@ -129,7 +129,7 @@ function Hero() {
               </motion.a>
               <motion.a 
                 whileHover={{ scale: 1.05 }}
-                href="https://wa.me/5591999999999?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20seus%20produtos" 
+                href="https://wa.me/5581999928655?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20seus%20produtos" 
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[#4B7B39] hover:bg-[#264E1D] transition-colors text-white px-6 py-3 rounded-lg font-semibold w-full sm:w-auto"
