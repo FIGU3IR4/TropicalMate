@@ -2,20 +2,32 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaBars, FaTimes, FaHeart, FaHands, FaLeaf } from "react-icons/fa"; // Adicionado mais ícones
 import Logo from './assets/Logo.jpg';
-import img1 from './assets/Foto1.jpg';
-import img3 from './assets/Foto3.jpg';
-import img2 from './assets/Foto2.jpg'; // Importe o logo
-// Paleta de Cores (Definidas em Hex para uso direto no Tailwind):
-// - #264E1D: Verde Escuro (Primário, Títulos)
-// - #4B7B39: Verde Médio (Secundário, Detalhes)
-// - #A15E26: Marrom/Cobre (Destaque, CTA)
-// - #F5E4B8: Bege Claro (Fundo Principal)
+
+import cereja from './assets/Cereja.jpg';
+import MentaBlack from './assets/MentaBlack.jpg';
+import MentaMonster from './assets/MentaMonster.jpg';
+import TuttiFruiti from './assets/TuttiFruit.jpg';
+import PuraErva from './assets/PuraErva.jpg';
+import MentaExtreme from './assets/MentaExtreme.jpg';
+import MentraBruta from './assets/MentaBruta.jpg';
+import FreshLemon from './assets/FreshLemon.jpg';
+import BlaclLemon from './assets/BlackLemon.jpg';
+import Abacaxi from './assets/Abacaxi.jpg';
+
+
 
 const sampleProducts = [
-  { id: 1, category: "Ervas", name: "Erva Matuta - Menta extreme", desc: "Cuia esculpida à mão. Acabamento premium.", price: "24,90", img: img1 },
-  { id: 2, category: "Ervas", name: "Erva Matuta - Menta Monster", desc: "Bomba profissional para uso diário.", price: "R$ 29,90",img: img2  },
-  { id: 3, category: "Ervas", name: "Erva Matuta - Cereja", desc: "Blend aromático para um tererê refrescante.", price: "22,99", img: img3  },
-  { id: 4, category: "Cuias", name: "Cuia de Couro", desc: "Clássica e durável, feita em couro legítimo.", price: "R$ 29,90", img: "https://images.unsplash.com/photo-1517486801-f2f6a6c4b2b6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" },
+ { id: 1, category: "Ervas", name: "Erva Matuta - Menta Extreme", desc: "Sabor intenso e refrescante, ideal para quem gosta de potência no tereré.", price: "R$ 24,90", img: MentaExtreme },
+  { id: 2, category: "Ervas", name: "Erva Matuta - Menta Monster", desc: "Mistura forte e gelada, perfeita para os amantes de menta.", price: "R$ 26,90", img: MentaMonster },
+  { id: 3, category: "Ervas", name: "Erva campário - Tutti Frutti", desc: "Sabor adocicado e suave, excelente para momentos leves.", price: "R$ 22,99", img: TuttiFruiti },
+  { id: 4, category: "Ervas", name: "Erva Matuta - Pura Erva", desc: "Tradicional e equilibrada, ideal para o tereré clássico.", price: "R$ 21,90", img: PuraErva },
+  { id: 5, category: "Ervas", name: "Erva Matuta - Menta Bruta", desc: "O sabor mais gelado da linha, refrescância extrema garantida.", price: "R$ 25,90", img: MentraBruta },
+  { id: 6, category: "Ervas", name: "Erva Matuta - Fresh Lemon", desc: "Toque cítrico e revigorante, combinação perfeita com gelo.", price: "R$ 23,90", img: FreshLemon },
+  { id: 7, category: "Ervas", name: "Erva Matuta - Black Lemon", desc: "Sabor exótico de limão com notas intensas e marcantes.", price: "R$ 27,90", img: BlaclLemon },
+  { id: 8, category: "Ervas", name: "Erva Matuta - Abacaxi", desc: "O equilíbrio entre o doce e o tropical! O sabor do abacaxi traz leveza e frescor, ideal para momentos de descontração com os amigos.", price: "R$ 27,90", img: Abacaxi },
+  { id: 9, category: "Ervas", name: "Erva Matuta - Cereja", desc: "Aromática e envolvente, a Cereja combina o sabor doce e suave da fruta com o frescor natural da erva mate. Um toque especial para o seu tereré diário.", price: "R$ 27,90", img: cereja },
+  { id: 10, category: "Ervas", name: "Erva Matuta - menta Black", desc: "Mistura premium de erva mate com menta negra. O sabor intenso e refrescante é ideal para quem procura uma experiência gelada, sofisticada e cheia de personalidade.", price: "R$ 27,90", img: MentaBlack },
+
 ];
 
 // Variantes de Animação
@@ -195,12 +207,12 @@ function ProductCard({ product, index }) {
         2. Alterado 'object-cover' para 'object-contain' para mostrar a imagem completa.
         3. Adicionado 'p-2' no contêiner para um pequeno padding visual.
       */}
-      <div className="h-48 bg-white-200 overflow-hidden flex items-center justify-center p-2">
+      <div className="h-72 bg-white overflow-hidden flex items-center justify-center p-4">
         <img 
           // O replace não é mais necessário, pois você importou as imagens
           src={product.img} 
           alt={product.name} 
-          className="max-h-full max-w-full object-contain" 
+           className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105"
         />
       </div>
       <div className="p-5 flex flex-col flex-grow">
