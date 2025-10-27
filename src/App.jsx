@@ -13,20 +13,47 @@ import MentraBruta from './assets/MentaBruta.jpg';
 import FreshLemon from './assets/FreshLemon.jpg';
 import BlaclLemon from './assets/BlackLemon.jpg';
 import Abacaxi from './assets/Abacaxi.jpg';
-
-
+import cuiaazul from './assets/cuiagaazul.png';
+import cuiaverde from './assets/cuiaverde.png';
+import cuiavermelha from './assets/cuiavermelha.png';
+import cuiarosa from './assets/cuiarosa.png';
+import cuiapreta from './assets/cuiapreta.png';
+import cuiagazul from './assets/cuiagaazul.png';
+import cuiagvermelha from './assets/cuiagvermelha.png';
+import cuiagverde from './assets/cuiagverde.png';
+import cuiagroxa from './assets/cuiagroxa.png';
+import cuiagbranca from './assets/cuiagbranca.png';
 
 const sampleProducts = [
- { id: 1, category: "Ervas", name: "Erva Matuta - Menta Extreme", desc: "Sabor intenso e refrescante, ideal para quem gosta de potência no tereré.", price: "R$ 24,90", img: MentaExtreme },
-  { id: 2, category: "Ervas", name: "Erva Matuta - Menta Monster", desc: "Mistura forte e gelada, perfeita para os amantes de menta.", price: "R$ 26,90", img: MentaMonster },
-  { id: 3, category: "Ervas", name: "Erva campário - Tutti Frutti", desc: "Sabor adocicado e suave, excelente para momentos leves.", price: "R$ 22,99", img: TuttiFruiti },
-  { id: 4, category: "Ervas", name: "Erva Matuta - Pura Erva", desc: "Tradicional e equilibrada, ideal para o tereré clássico.", price: "R$ 21,90", img: PuraErva },
-  { id: 5, category: "Ervas", name: "Erva Matuta - Menta Bruta", desc: "O sabor mais gelado da linha, refrescância extrema garantida.", price: "R$ 25,90", img: MentraBruta },
-  { id: 6, category: "Ervas", name: "Erva Matuta - Fresh Lemon", desc: "Toque cítrico e revigorante, combinação perfeita com gelo.", price: "R$ 23,90", img: FreshLemon },
-  { id: 7, category: "Ervas", name: "Erva Matuta - Black Lemon", desc: "Sabor exótico de limão com notas intensas e marcantes.", price: "R$ 27,90", img: BlaclLemon },
-  { id: 8, category: "Ervas", name: "Erva Matuta - Abacaxi", desc: "O equilíbrio entre o doce e o tropical! O sabor do abacaxi traz leveza e frescor, ideal para momentos de descontração com os amigos.", price: "R$ 27,90", img: Abacaxi },
-  { id: 9, category: "Ervas", name: "Erva Matuta - Cereja", desc: "Aromática e envolvente, a Cereja combina o sabor doce e suave da fruta com o frescor natural da erva mate. Um toque especial para o seu tereré diário.", price: "R$ 27,90", img: cereja },
-  { id: 10, category: "Ervas", name: "Erva Matuta - menta Black", desc: "Mistura premium de erva mate com menta negra. O sabor intenso e refrescante é ideal para quem procura uma experiência gelada, sofisticada e cheia de personalidade.", price: "R$ 27,90", img: MentaBlack },
+ { id: 1, category: "Ervas", name: "Erva Matuta - Menta Extreme", desc: "Sabor intenso e refrescante, ideal para quem gosta de potência no tereré.", price: <p>
+  De R$ 32,60 <br/> Por R$ 29,00
+</p>
+  , img: MentaExtreme },
+  { id: 2, category: "Ervas", name: "Erva Matuta - Menta Monster", desc: "Mistura forte e gelada, perfeita para os amantes de menta.", price: <p>
+  De R$ 32,60 <br/> Por R$ 29,00
+</p>, img: MentaMonster },
+  { id: 3, category: "Ervas", name: "Erva Campanário - Tutti Frutti", desc: "Sabor adocicado e suave, excelente para momentos leves.", price: <p>
+  De R$ 22,00 <br/> Por R$ 21,00
+</p>, img: TuttiFruiti },
+  { id: 4, category: "Ervas", name: "Erva Matuta - Pura Erva", desc: "Tradicional e equilibrada, ideal para o tereré clássico.", price: "R$ 23,00", img: PuraErva },
+  { id: 5, category: "Ervas", name: "Erva Matuta - Menta Bruta", desc: "O sabor mais gelado da linha, refrescância extrema garantida.", price: "R$ 23,00", img: MentraBruta },
+  { id: 6, category: "Ervas", name: "Erva Matuta - Fresh Lemon", desc: "Toque cítrico e revigorante, combinação perfeita com gelo.", price: "R$ 23,00", img: FreshLemon },
+  { id: 7, category: "Ervas", name: "Erva Matuta - Black Lemon", desc: "Sabor exótico de limão com notas intensas e marcantes.", price:<p>
+  De R$ 32,60 <br/> Por R$ 29,00
+</p>, img: BlaclLemon },
+  { id: 8, category: "Ervas", name: "Erva Matuta - Abacaxi", desc: "O equilíbrio entre o doce e o tropical! O sabor do abacaxi traz leveza e frescor, ideal para momentos de descontração com os amigos.", price: "R$ 23,00", img: Abacaxi },
+  { id: 9, category: "Ervas", name: "Erva Matuta - Cereja", desc: "Aromática e envolvente, a Cereja combina o sabor doce e suave da fruta com o frescor natural da erva mate. Um toque especial para o seu tereré diário.", price: "R$ 23,00", img: cereja },
+  { id: 10, category: "Ervas", name: "Erva Matuta - menta Black", desc: "Mistura premium de erva mate com menta negra. O sabor intenso e refrescante é ideal para quem procura uma experiência gelada, sofisticada e cheia de personalidade.", price: "R$ 23,00", img: MentaBlack },
+  { id: 11, category: "Cuias", name: "Cuia Grande- Azul", desc: "Sabor intenso e refrescante, ideal para quem gosta de potência no tereré.", price: "R$ 27,00", img: cuiaazul },
+  { id: 12, category: "Cuias", name: "Cuia Media- Verde", desc: "Mistura forte e gelada, perfeita para os amantes de menta.", price: "R$ 25,00", img: cuiaverde },
+  { id: 13, category: "Cuias", name: "Cuia Media- Vermelha", desc: "Sabor adocicado e suave, excelente para momentos leves.", price: "R$ 25,00", img: cuiavermelha },
+  { id: 14, category: "Cuias", name: "Cuia Media- Rosa", desc: "Tradicional e equilibrada, ideal para o tereré clássico.", price: "R$ 25,00", img: cuiarosa },
+  { id: 15, category: "Cuias", name: "Cuia Media- Preta", desc: "O sabor mais gelado da linha, refrescância extrema garantida.", price: "R$ 25,00", img: cuiapreta },
+  { id: 16, category: "Cuias", name:  "Cuia Grande- Azul", desc: "Toque cítrico e revigorante, combinação perfeita com gelo.", price: "R$ 27,00", img: cuiagazul },
+  { id: 17, category:"Cuias", name: "Cuia Grande- Vermelha", desc: "Sabor exótico de limão com notas intensas e marcantes.", price: "R$ 27,00", img: cuiagvermelha },
+  { id: 18, category: "Cuias", name: "Cuia Grande- Verde", desc: "O equilíbrio entre o doce e o tropical! O sabor do abacaxi traz leveza e frescor, ideal para momentos de descontração com os amigos.", price: "R$ 27,00", img: cuiagverde },
+  { id: 19, category:"Cuias", name:  "Cuia Grande- Roxa", desc: "Aromática e envolvente, a Cereja combina o sabor doce e suave da fruta com o frescor natural da erva mate. Um toque especial para o seu tereré diário.", price: "R$ 27,00", img: cuiagroxa },
+  { id: 20, category: "Cuias", name:  "Cuia Grande- Branca", desc: "Mistura premium de erva mate com menta negra. O sabor intenso e refrescante é ideal para quem procura uma experiência gelada, sofisticada e cheia de personalidade.", price: "R$ 27,00", img: cuiagbranca },
 
 ];
 
